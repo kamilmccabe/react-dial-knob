@@ -80,11 +80,12 @@ class KnobArea {
             this.angle = this.angleFromValue(this.value)
         }
 
-        if (this.value % this.step || (this.max - this.min) % this.step) {
-            throw new Error(
-                'Value and (max - min) should be divisible by step.',
-            )
-        }
+        // removed this to allow for decimals
+//         if (this.value % this.step || (this.max - this.min) % this.step) {
+//             throw new Error(
+//                 'Value and (max - min) should be divisible by step.',
+//             )
+//         }
     }
 
     get angle(): number {
